@@ -1,5 +1,27 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                               STANDARD VIM SETTINGS                          "     
+"                               PLUGINS                                        "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
+" Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+Plug 'ctrlpvim/ctrlp.vim'
+" A tree explorer plugin for vim
+Plug 'scrooloose/nerdtree'
+" Lean & mean status/tabline for vim
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+" Quoting/Parenthesizing  made simple
+Plug 'tpope/vim-surround'
+" EditorConfig (file format to maintain consistent coding styles between editors) plugin for Vim
+Plug 'editorconfig/editorconfig-vim'
+
+" Technology specific plugins
+Plug 'pangloss/vim-javascript'
+Plug 'othree/yajs.vim'
+Plug 'moll/vim-node'
+Plug 'mxw/vim-jsx'
+call plug#end()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               STANDARD VIM SETTINGS                          "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Turns on all enhancements for Vi Improved.
@@ -35,8 +57,11 @@ set undodir=~/.vim/undo         " where to save undo histories
 set undolevels=1000             " How many undos
 set undoreload=10000            " number of lines to save for undo
 
+" COLOR!
+colorscheme tomorrow-night
+
 " Enable loading of plugin file when a file is edited
-filetype plugin on 
+filetype plugin on
 
 " FINDING FILES
 
@@ -52,7 +77,30 @@ set wildmode=longest:list,full
 set wildignore+=**/node_modules/**
 
 
-" COLOR!
-colorscheme tomorrow-night
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                   CUSTOM                                     "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               PLUGIN CONFIGURATION                           "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ctrlp
+let g:ctrlp_user_command = [
+\   '.git',
+\   'cd %s && git ls-files . -co --exclude-standard',
+\   'find %s -type f'
+\]
+
+" AIRLINE
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
+" NERDTree
+nmap ,f :NERDTreeToggle
+nmap ,F :NERDTreeFind
+let g:NERDTreeWinSize = 32
+
+" JSX
+""""""""""""""""""""""""""""""""""""""""
+let g:jsx_ext_required = 0        " Allow JSX in .js files
 
