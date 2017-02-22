@@ -93,7 +93,12 @@ set wildignore+=**/node_modules/**
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   CUSTOM                                     "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd QuickFixCmdPost *grep* cwindow " Open Quickfix window after grep
+
+" Remove trailing whitespace on save
+" Note: Remove this if you edit files which require trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
+
+autocmd QuickFixCmdPost *grep* cwindow     " Open Quickfix window after grep
 
 nnoremap <silent> ]b :bnext<CR>            " Map ]b to :bnext
 nnoremap <silent> [b :bprevious<CR>        " Map [b to :bprevious
