@@ -18,6 +18,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'othree/yajs.vim'
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
+Plug 'derekwyatt/vim-scala'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -37,7 +38,7 @@ set tabstop=2                  " Number of spaces that a <Tab> in the file count
 set shiftwidth=2               " Number of spacs indented with reindent operations
 set expandtab                  " Use spaces instead of tab characters
 set nowrap                     " (Dont) wrap the display lines
-set number		                 " Show line numbers
+set number                     " Show line numbers
 set hlsearch                   " highlight search results
 set ruler                      " Show row and column in status bar
 set ignorecase                 " Case insensitive search by default
@@ -51,11 +52,17 @@ set warn                       " Give a warning message when a shell command is 
 set colorcolumn=81,121         " highlight the 81st column
 set autoread                   " When a file has been detected to have been changed outside of Vim, automatically read it again
 
+set backspace=indent,eol,start " Allow backspace over autoindent, linebreaks, and over the start of insert
+
 " Make vim remember undos, even when the file is closed!
 set undofile                    " Save undo's after file closes
 set undodir=~/.vim/undo         " where to save undo histories
 set undolevels=1000             " How many undos
 set undoreload=10000            " number of lines to save for undo
+
+" Make vim scroll quicker
+set ttyfast                     " Indicates a fast terminal connection
+set ttyscroll=3                 " Maximum number of lines to scroll the screen
 
 " COLOR!
 colorscheme tomorrow-night
