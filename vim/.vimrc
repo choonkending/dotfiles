@@ -68,6 +68,7 @@ set undoreload=10000            " number of lines to save for undo
 " Make vim scroll quicker
 set ttyfast                     " Indicates a fast terminal connection
 set ttyscroll=3                 " Maximum number of lines to scroll the screen
+set lazyredraw                  " Stops macros rendering every step
 
 " COLOR!
 colorscheme tomorrow-night
