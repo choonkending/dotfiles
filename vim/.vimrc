@@ -95,6 +95,9 @@ set wildignore+=**/node_modules/**
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd QuickFixCmdPost *grep* cwindow " Open Quickfix window after grep
 
+nmap <silent> ]b :bnext<CR>            " Map ]b to :bnext
+nmap <silent> [b :bprevious<CR>        " Map [b to :bprevious
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               PLUGIN CONFIGURATION                           "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
