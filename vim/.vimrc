@@ -54,6 +54,9 @@ set warn                       " Give a warning message when a shell command is 
 set colorcolumn=81,121         " highlight the 81st column
 set autoread                   " When a file has been detected to have been changed outside of Vim, automatically read it again
 
+set splitbelow                 " Split a window below the current one
+set splitright                 " Split a window to the right of the current one
+
 set backspace=indent,eol,start " Allow backspace over autoindent, linebreaks, and over the start of insert
 
 " Make vim remember undos, even when the file is closed!
