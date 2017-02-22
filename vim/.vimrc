@@ -10,6 +10,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 " Quoting/Parenthesizing  made simple
 Plug 'tpope/vim-surround'
+" Git wrapper
+Plug 'tpope/vim-fugitive'
 " EditorConfig (file format to maintain consistent coding styles between editors) plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
 
