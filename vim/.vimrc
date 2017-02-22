@@ -104,6 +104,7 @@ let g:ctrlp_user_command = [
 " AIRLINE
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+let g:airline#extensions#tabline#enabled = 1  " Enable the list of buffers
 
 " NERDTree
 nmap ,f :NERDTreeToggle
