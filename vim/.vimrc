@@ -102,6 +102,8 @@ autocmd QuickFixCmdPost *grep* cwindow     " Open Quickfix window after grep
 
 nnoremap <silent> ]b :bnext<CR>            " Map ]b to :bnext
 nnoremap <silent> [b :bprevious<CR>        " Map [b to :bprevious
+nnoremap <silent> ]c :cnext<CR>            " Map ]c to :cnext
+nnoremap <silent> [c :cprevious<CR>        " Map [c to :cprevious
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               PLUGIN CONFIGURATION                           "
