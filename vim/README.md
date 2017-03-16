@@ -15,4 +15,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```
 4. Copy `.vimrc` into `~/.vimrc` 
 5. Open `vim` and run `:PlugInstall`
+6. Install YouCompleteMe
+```
+cd ~/.vim/plugged/YouCompleteMe
+./install.py
+```
 
