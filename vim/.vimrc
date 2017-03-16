@@ -14,6 +14,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 " EditorConfig (file format to maintain consistent coding styles between editors) plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
+" Autocomplete - YouCompleteMe
+Plug 'Valloric/YouCompleteMe'
 
 " Technology specific plugins
 Plug 'pangloss/vim-javascript'
@@ -75,12 +77,6 @@ colorscheme tomorrow-night
 
 " Enable loading of plugin file when a file is edited
 filetype plugin on
-
-" FINDING FILES
-
-" Search down into subfolders
-" Provides tab-completion for all file-related tasks
-set path+=**
 
 " Display all matching files when we tab complete
 set wildmenu
