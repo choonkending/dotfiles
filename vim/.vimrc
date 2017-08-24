@@ -117,8 +117,8 @@ let g:airline_right_sep=''
 let g:airline#extensions#tabline#enabled = 1  " Enable the list of buffers
 
 " NERDTree
-nmap ,f :NERDTreeToggle
-nmap ,F :NERDTreeFind
+nnoremap <silent> ,f :NERDTreeToggle<CR>
+nnoremap <silent> ,F :NERDTreeFind<CR>
 let g:NERDTreeWinSize = 32
 
 " JSX
