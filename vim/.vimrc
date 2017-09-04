@@ -12,6 +12,8 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 " Git wrapper
 Plug 'tpope/vim-fugitive'
+" Comment stuff out
+Plug 'tpope/vim-commentary'
 " EditorConfig (file format to maintain consistent coding styles between editors) plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
 " Autocomplete - YouCompleteMe
@@ -23,6 +25,7 @@ Plug 'othree/yajs.vim'
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
 Plug 'derekwyatt/vim-scala'
+Plug 'flowtype/vim-flow'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -89,10 +92,7 @@ set wildignore+=**/node_modules/**
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   CUSTOM                                     "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Remove trailing whitespace on save
-" Note: Remove this if you edit files which require trailing whitespace
-autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritePre * %s/\s\+$//e          " Remove trailing whitespace on save
 
 autocmd QuickFixCmdPost *grep* cwindow     " Open Quickfix window after grep
 
@@ -121,6 +121,14 @@ nnoremap <silent> ,f :NERDTreeToggle<CR>
 nnoremap <silent> ,F :NERDTreeFind<CR>
 let g:NERDTreeWinSize = 32
 
+"Use locally installed flow
+let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
+if matchstr(local_flow, "^\/\\w") == ''
+    let local_flow= getcwd() . "/" . local_flow
+endif
+if executable(local_flow)
+  let g:flow#flowpath = local_flow
+endif
 " JSX
 """"""""""""""""""""""""""""""""""""""""
 let g:jsx_ext_required = 0        " Allow JSX in .js files
