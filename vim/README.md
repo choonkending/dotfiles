@@ -7,7 +7,10 @@ I require and nothing more.
 ### MacOS
 
 1. `brew install macvim --with-override-system-vim`
-2. Copy `colors/` into `~/.vim/colors/` for theme colors
+2. Download the tomorrow-night theme colours for vim
+```bash
+curl https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night.vim --output ~/.vim/colors/tomorrow-night.vim --create-dirs
+```
 3. Install [vim-plug](https://github.com/junegunn/vim-plug)
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
