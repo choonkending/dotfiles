@@ -6,4 +6,5 @@ This is my attempt at creating a simple tmux conf that does not conflict with vi
 ### MacOS
 
 1. `brew install tmux`
-2. Copy `.tmux.conf` into `~/.tmux.conf`
+2. `brew install reattach-to-user-namespace` - helps with using Mac OS X Programs `pbpaste` and `pbpaste` under tmux
+3. Copy `.tmux.conf` into `~/.tmux.conf`
