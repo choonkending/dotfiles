@@ -97,22 +97,28 @@ set wildignore+=**/node_modules/**
 " Note: Remove this if you edit files which require trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
 
-autocmd QuickFixCmdPost *grep* cwindow     " Open Quickfix window after grep
+autocmd QuickFixCmdPost *grep* cwindow            " Open Quickfix window after grep
 
-nnoremap <silent> ]b :bnext<CR>            " Map ]b to :bnext
-nnoremap <silent> [b :bprevious<CR>        " Map [b to :bprevious
-nnoremap <silent> ]c :cnext<CR>            " Map ]c to :cnext
-nnoremap <silent> [c :cprevious<CR>        " Map [c to :cprevious
+nnoremap <silent> ]b :bnext<CR>                   " Map ]b to :bnext
+nnoremap <silent> [b :bprevious<CR>               " Map [b to :bprevious
+nnoremap <silent> ]c :cnext<CR>                   " Map ]c to :cnext
+nnoremap <silent> [c :cprevious<CR>               " Map [c to :cprevious
 
 " Map Ctrl-direction to window-movement keys for easier navigation
 " C-J: Down
 " C-K: Up
 " C-H: Left
 " C-L: Right
-nnoremap <C-J> <C-W><C-J>                  " Map Ctrl-J to Ctrl-W Ctrl-J
-nnoremap <C-K> <C-W><C-K>                  " Map Ctrl-K to Ctrl-W Ctrl-K
-nnoremap <C-H> <C-W><C-H>                  " Map Ctrl-H to Ctrl-W Ctrl-H
-nnoremap <C-L> <C-W><C-L>                  " Map Ctrl-L to Ctrl-W Ctrl-L
+nnoremap <C-J> <C-W><C-J>                         " Map Ctrl-J to Ctrl-W Ctrl-J
+nnoremap <C-K> <C-W><C-K>                         " Map Ctrl-K to Ctrl-W Ctrl-K
+nnoremap <C-H> <C-W><C-H>                         " Map Ctrl-H to Ctrl-W Ctrl-H
+nnoremap <C-L> <C-W><C-L>                         " Map Ctrl-L to Ctrl-W Ctrl-L
+
+" Experimental: Resizing split windows
+nnoremap <silent> [w :vertical resize -5<CR>      " Map [w to decrease width by 5
+nnoremap <silent> ]w :vertical resize +5<CR>      " Map ]w to increase width by 5
+nnoremap <silent> [h :resize -5<CR>               " Map [h to decrease height by 5
+nnoremap <silent> ]h :resize +5<CR>               " Map ]h to increase height by 5
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               PLUGIN CONFIGURATION                           "
@@ -127,7 +133,7 @@ let g:ctrlp_user_command = [
 " AIRLINE
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline#extensions#tabline#enabled = 1  " Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1      " Enable the list of buffers
 
 " NERDTree
 nnoremap <silent> ,f :NERDTreeToggle<CR>
@@ -136,5 +142,5 @@ let g:NERDTreeWinSize = 32
 
 " JSX
 """"""""""""""""""""""""""""""""""""""""
-let g:jsx_ext_required = 0        " Allow JSX in .js files
+let g:jsx_ext_required = 0                        " Allow JSX in .js files
 
