@@ -12,7 +12,7 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 " Git wrapper
 Plug 'tpope/vim-fugitive'
-" Comment stuff out
+" Vim commentary
 Plug 'tpope/vim-commentary'
 " EditorConfig (file format to maintain consistent coding styles between editors) plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
@@ -80,6 +80,8 @@ colorscheme tomorrow-night
 " Enable loading of plugin file when a file is edited
 filetype plugin on
 
+" FINDING FILES
+
 " Display all matching files when we tab complete
 set wildmenu
 set wildmode=longest:list,full
@@ -87,11 +89,13 @@ set wildmode=longest:list,full
 " Ignore node_modules for searches
 set wildignore+=**/node_modules/**
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   CUSTOM                                     "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufWritePre * %s/\s\+$//e          " Remove trailing whitespace on save
+
+" Remove trailing whitespace on save
+" Note: Remove this if you edit files which require trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
 
 autocmd QuickFixCmdPost *grep* cwindow     " Open Quickfix window after grep
 
@@ -99,6 +103,16 @@ nnoremap <silent> ]b :bnext<CR>            " Map ]b to :bnext
 nnoremap <silent> [b :bprevious<CR>        " Map [b to :bprevious
 nnoremap <silent> ]c :cnext<CR>            " Map ]c to :cnext
 nnoremap <silent> [c :cprevious<CR>        " Map [c to :cprevious
+
+" Map Ctrl-direction to window-movement keys for easier navigation
+" C-J: Down
+" C-K: Up
+" C-H: Left
+" C-L: Right
+nnoremap <C-J> <C-W><C-J>                  " Map Ctrl-J to Ctrl-W Ctrl-J
+nnoremap <C-K> <C-W><C-K>                  " Map Ctrl-K to Ctrl-W Ctrl-K
+nnoremap <C-H> <C-W><C-H>                  " Map Ctrl-H to Ctrl-W Ctrl-H
+nnoremap <C-L> <C-W><C-L>                  " Map Ctrl-L to Ctrl-W Ctrl-L
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               PLUGIN CONFIGURATION                           "
