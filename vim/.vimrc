@@ -97,9 +97,6 @@ set wildignore+=**/node_modules/**
 " Note: Remove this if you edit files which require trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
 
-" Run prettier on save
-autocmd BufWritePost * silent! execute '! node_modules/.bin/eslint --fix %:p >/dev/null 2>&1'
-
 autocmd QuickFixCmdPost *grep* cwindow            " Open Quickfix window after grep
 
 nnoremap <silent> ]b :bnext<CR>                   " Map ]b to :bnext
