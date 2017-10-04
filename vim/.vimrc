@@ -93,6 +93,9 @@ set wildignore+=**/node_modules/**
 "                                   CUSTOM                                     "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Move up the directory hierarchy until tag is found
+set tags=tags;/
+
 " Remove trailing whitespace on save
 " Note: Remove this if you edit files which require trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
