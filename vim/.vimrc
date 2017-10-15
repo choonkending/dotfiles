@@ -117,12 +117,6 @@ nnoremap <C-K> <C-W><C-K>                         " Map Ctrl-K to Ctrl-W Ctrl-K
 nnoremap <C-H> <C-W><C-H>                         " Map Ctrl-H to Ctrl-W Ctrl-H
 nnoremap <C-L> <C-W><C-L>                         " Map Ctrl-L to Ctrl-W Ctrl-L
 
-" Experimental: Resizing split windows
-nnoremap <silent> [w :vertical resize -5<CR>      " Map [w to decrease width by 5
-nnoremap <silent> ]w :vertical resize +5<CR>      " Map ]w to increase width by 5
-nnoremap <silent> [h :resize -5<CR>               " Map [h to decrease height by 5
-nnoremap <silent> ]h :resize +5<CR>               " Map ]h to increase height by 5
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               PLUGIN CONFIGURATION                           "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
