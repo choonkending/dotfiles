@@ -25,6 +25,7 @@ Plug 'othree/yajs.vim'
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
 Plug 'derekwyatt/vim-scala'
+Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
