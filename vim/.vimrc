@@ -66,6 +66,7 @@ set splitbelow                 " Split a window below the current one
 set splitright                 " Split a window to the right of the current one
 
 set backspace=indent,eol,start " Allow backspace over autoindent, linebreaks, and over the start of insert
+set shortmess=I                " Don't give an intro message when starting vim
 
 " Make vim remember undos, even when the file is closed!
 set undofile                    " Save undo's after file closes
