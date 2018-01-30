@@ -26,6 +26,9 @@ Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
 Plug 'derekwyatt/vim-scala'
 Plug 'neovimhaskell/haskell-vim'
+
+" Colourscheme
+Plug 'tyrannicaltoucan/vim-deep-space'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -76,7 +79,9 @@ set ttyscroll=3                 " Maximum number of lines to scroll the screen
 set lazyredraw                  " Stops macros rendering every step
 
 " COLOR!
-colorscheme tomorrow-night
+set background=dark
+set termguicolors
+colorscheme deep-space
 
 " Enable loading of plugin file when a file is edited
 filetype plugin on
@@ -126,6 +131,8 @@ let g:ctrlp_user_command = [
 \]
 
 " AIRLINE
+let g:airline_theme='deep_space'                  " Set airline theme to deepspace
+
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#tabline#enabled = 1      " Enable the list of buffers
