@@ -7,7 +7,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 " A tree explorer plugin for vim
 Plug 'scrooloose/nerdtree'
 " Lean & mean status/tabline for vim
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Quoting/Parenthesizing  made simple
 Plug 'tpope/vim-surround'
 " Git wrapper
