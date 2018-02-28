@@ -31,3 +31,9 @@ pip3 install neovim
 ```js
 nvim +PlugInstall
 ```
+7. Add aliases for nvim in your `.zshrc` or `.bashrc` file
+```
+# Set vim alises
+alias vim="nvim"
+alias vi="nvim"
+```
