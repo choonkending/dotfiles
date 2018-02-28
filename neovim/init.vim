@@ -19,6 +19,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 " EditorConfig (file format to maintain consistent coding styles between editors) plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
+" Dark powered asynchronous completion framework for neovim/Vim8
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Autocomplete - YouCompleteMe
 
 " Colourscheme
 Plug 'tyrannicaltoucan/vim-deep-space'
@@ -100,6 +103,9 @@ let g:airline#extensions#tabline#enabled = 1      " Enable the list of buffers
 nnoremap <silent> ,f :NERDTreeToggle<CR>
 nnoremap <silent> ,F :NERDTreeFind<CR>
 let g:NERDTreeWinSize = 32
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
 
 " JSX
 """"""""""""""""""""""""""""""""""""""""

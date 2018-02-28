@@ -10,7 +10,7 @@ brew install neovim
 ```
 2. Install [vim-plug](https://github.com/junegunn/vim-plug) - a minimalist Vim plugin manager
 ```
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 3. Create config file for nvim
@@ -21,7 +21,13 @@ mkdir -p ~/.config/nvim/
 ```
 cp init.vim ~/.config/nvim/init.vim
 ```
-5. Install Vim Plugins
+5. Install Python3 for deoplete (if you do not already have it)
+```
+brew install python3
+pip3 install neovim
+```
+
+6. Install Vim Plugins
 ```js
 nvim +PlugInstall
 ```
