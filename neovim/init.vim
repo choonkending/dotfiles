@@ -105,6 +105,22 @@ nnoremap <silent> ,f :NERDTreeToggle<CR>
 nnoremap <silent> ,F :NERDTreeFind<CR>
 let g:NERDTreeWinSize = 32
 
+" fzf
+" Use ripgrep instead of default find command to traverse file system while respecting .gitignore
+let $FZF_DEFAULT_COMMAND = '
+  \ rg --column --line-number --files --no-ignore --hidden --follow
+  \ --glob "!{.git,node_moduels}/*" '
+" --column            : show column numbers
+" --line-number       : show line numbers
+" --files             : search each file that would be searched (but don't search)
+" --hidden            : search hidden files and directories
+" --follow            : follow symlinks
+" --glob:   include or exclude files for searching that match the specified glob
+
+" Map Ctrl P to :Files
+nnoremap <silent> <C-P> :Files<CR>
+
+
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 
