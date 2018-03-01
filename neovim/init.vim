@@ -119,7 +119,11 @@ let $FZF_DEFAULT_COMMAND = '
 
 " Map Ctrl P to :Files
 nnoremap <silent> <C-P> :Files<CR>
-
+" Set built-in grep of vim to use rg
+" --vimgrep - Show results with every match on its own line, including line numbers and
+"           column numbers. With this option, a line with more than one match will be
+"           printed more than once.
+set grepprg=rg\ --vimgrep
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
