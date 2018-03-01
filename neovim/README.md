@@ -26,12 +26,15 @@ cp init.vim ~/.config/nvim/init.vim
 brew install python3
 pip3 install neovim
 ```
-
-6. Install Vim Plugins
+6. Install ripgrep as a search tool
+```
+brew install ripgrep
+```
+7. Install Vim Plugins
 ```js
 nvim +PlugInstall
 ```
-7. Add aliases for nvim in your `.zshrc` or `.bashrc` file
+8:. Add aliases for nvim in your `.zshrc` or `.bashrc` file
 ```
 # Set vim alises
 alias vim="nvim"
