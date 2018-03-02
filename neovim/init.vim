@@ -131,6 +131,8 @@ command! -bang -nargs=* Rg
 
 " Map Ctrl P to :Files
 nnoremap <silent> <C-P> :Files<CR>
+" Map ,S to find all instances of current word with Rg search
+nnoremap <silent> ,S :Rg <C-R><C-W><CR>
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
