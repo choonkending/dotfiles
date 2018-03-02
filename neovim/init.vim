@@ -117,13 +117,20 @@ let $FZF_DEFAULT_COMMAND = '
 " --follow            : follow symlinks
 " --glob:   include or exclude files for searching that match the specified glob
 
+" Define command Rg for searching, redefine command if already defined
+" It accepts any number of arguments (0, 1, or many), separated by white space
+" It calls fzf functions:
+" - fzf#vim#grep(command, with_column, [options], [fullscreen])
+" - fzf#vim#with_preview([[options], preview window, [toggle keys...]])
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
 " Map Ctrl P to :Files
 nnoremap <silent> <C-P> :Files<CR>
-" Set built-in grep of vim to use rg
-" --vimgrep - Show results with every match on its own line, including line numbers and
-"           column numbers. With this option, a line with more than one match will be
-"           printed more than once.
-set grepprg=rg\ --vimgrep
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
