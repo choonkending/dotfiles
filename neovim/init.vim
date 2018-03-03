@@ -24,7 +24,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Autocomplete - YouCompleteMe
 
 " Colourscheme
-Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'liuchengxu/space-vim-dark'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -62,8 +62,7 @@ set undoreload=10000            " number of lines to save for undo
 " COLOR!
 set background=dark
 set termguicolors
-colorscheme deep-space
-
+color space-vim-dark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   CUSTOM                                     "
