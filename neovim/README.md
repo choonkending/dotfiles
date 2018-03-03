@@ -40,3 +40,7 @@ nvim +PlugInstall
 alias vim="nvim"
 alias vi="nvim"
 ```
+9. Set nvim as your git core editor
+```
+git config --global core.editor nvim
+```
