@@ -93,7 +93,6 @@ nnoremap <C-L> <C-W><C-L>                         " Map Ctrl-L to Ctrl-W Ctrl-L
 "                               PLUGIN CONFIGURATION                           "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AIRLINE
-let g:airline_theme='deep_space'                  " Set airline theme to deepspace
 
 let g:airline_left_sep=''
 let g:airline_right_sep=''
