@@ -106,8 +106,8 @@ let g:NERDTreeWinSize = 32
 " fzf
 " Use ripgrep instead of default find command to traverse file system while respecting .gitignore
 let $FZF_DEFAULT_COMMAND = '
-  \ rg --column --line-number --files --no-ignore --hidden --follow
-  \ --glob "!{.git,node_modules}/*" '
+  \ rg --column --line-number --files --hidden --follow
+  \ --glob "!{.git}/*" '
 " --column            : show column numbers
 " --line-number       : show line numbers
 " --files             : search each file that would be searched (but don't search)
