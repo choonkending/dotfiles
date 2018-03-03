@@ -134,6 +134,10 @@ nnoremap <silent> ,S :Rg <C-R><C-W><CR>
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
+" Map Tab and Shift + Tab as selection keys in popupmenu-keys
+" - pumvisible - Returns non-zero when the popup menu is visible, zero otherwise
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " JSX
 """"""""""""""""""""""""""""""""""""""""
