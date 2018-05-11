@@ -151,7 +151,7 @@ let g:jsx_ext_required = 0                        " Allow JSX in .js files
 " Asynchronous Lint Engine (ALE)
 " Limit linters used for JavaScript.
 let g:ale_linters = {
-\  'javascript': ['flow']
+\  'javascript': ['flow', 'eslint']
 \}
 highlight clear ALEErrorSign " otherwise uses error bg color (typically red)
 highlight clear ALEWarningSign " otherwise uses error bg color (typically red)
