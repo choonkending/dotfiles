@@ -156,7 +156,7 @@ let g:ale_linters = {
 \}
 " Use eslint to fix javascript formatting
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
+\   'javascript': ['eslint']
 \}
 
 let g:ale_fix_on_save = 1     " Fix files automatically on save
