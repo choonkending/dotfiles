@@ -27,7 +27,10 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'w0rp/ale'
 
 " Colourscheme
-Plug 'liuchengxu/space-vim-dark'
+Plug 'patstockwell/vim-monokai-tasty'
+Plug 'mxw/vim-jsx'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -64,8 +67,9 @@ set undoreload=10000            " number of lines to save for undo
 
 " COLOR!
 set background=dark
-set termguicolors
-color space-vim-dark
+colorscheme vim-monokai-tasty
+
+let g:vim_monokai_tasty_italic = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   CUSTOM                                     "
