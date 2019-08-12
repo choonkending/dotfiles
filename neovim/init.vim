@@ -31,6 +31,10 @@ Plug 'patstockwell/vim-monokai-tasty'
 Plug 'mxw/vim-jsx'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'pangloss/vim-javascript'
+
+
+" Calculates the bundle size of from node module
+Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -160,6 +164,7 @@ let g:ale_linters = {
 \}
 " Use eslint to fix javascript formatting
 let g:ale_fixers = {
+\   '*': ['prettier'],
 \   'javascript': ['eslint']
 \}
 
