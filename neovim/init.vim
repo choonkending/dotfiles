@@ -32,6 +32,9 @@ Plug 'mxw/vim-jsx'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'pangloss/vim-javascript'
 
+
+" Calculates the bundle size of from node module
+Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -176,19 +179,12 @@ nnoremap <silent> [a :ALEPreviousWrap<CR>
 set nobackup
 set nowritebackup
 
-" Set number of screen lines used for command-line
-set cmdheight=2
+set cmdheight=2                 " Set number of screen lines used for command-line
+set updatetime=300              " Milliseconds of nothing being typed before the swap file is written to disk
+set shortmess+=c                " Don't give Insert Completion Menu messages
+set signcolumn=yes              " Always show signcolumn
 
-" Milliseconds of nothing being typed before the swap file is written to disk
-set updatetime=300
-
-" Don't give Insert Completion Menu messages in
-set shortmess+=c
-
-" Always show signcolumn
-set signcolumn=yes
-
-" Use tab for trigger completion with characters ahead and navigate
+" Use Tab for trigger completion with characters ahead and navigate
 "   inoremap - non-recursive mapping in insert mode (it disallows mapping for
 "     <TAB>, to avoid nested and recursive mappings)
 "   silent - execute command silently
@@ -216,6 +212,20 @@ endfunction
 " chain at current position
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
+" Use K to show documentation in preview window
+" :call - call a function
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim', 'help'], &filetype) >= 0)
+    " Expand word under cursor
+    execute 'h '.expand('<cword>')
+  else
+    " Show documentation of the current word under hover
+    call CocAction('doHover')
+  endif
+endfunction
+
 " Use [g and ]g to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
@@ -225,3 +235,4 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
