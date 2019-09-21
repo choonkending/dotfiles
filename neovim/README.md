@@ -17,10 +17,9 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 ```
 curl https://raw.githubusercontent.com/choonkending/dotfiles/master/neovim/init.vim --output ~/.config/nvim/init.vim --create-dirs
 ```
-4. Install Python3 for deoplete (if you do not already have it)
+4. Copy `coc-settings.json` to `~/.config/nvim/coc-settings.json`
 ```
-brew install python3
-pip3 install neovim
+curl https://raw.githubusercontent.com/choonkending/dotfiles/master/neovim/coc-settings.json --output ~/.config/nvim/coc-settings.json --create-dirs
 ```
 5. Install ripgrep as a search tool
 ```
@@ -39,4 +38,15 @@ alias vi="nvim"
 8. Set nvim as your git core editor
 ```
 git config --global core.editor nvim
+```
+
+## Configuring Haskell IDE engine for [coc.nvim](https://github.com/neoclide/coc.nvim)
+
+1. Download the source code following [these instructions](https://github.com/haskell/haskell-ide-engine#download-the-source-code)
+```
+git clone https://github.com/haskell/haskell-ide-engine --recurse-submodules
+cd haskell-ide-engine
+
+stack ./install.hs hie-version-number
+stack ./install.hs build-data
 ```
