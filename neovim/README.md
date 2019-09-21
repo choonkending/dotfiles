@@ -44,9 +44,14 @@ git config --global core.editor nvim
 
 1. Download the source code following [these instructions](https://github.com/haskell/haskell-ide-engine#download-the-source-code)
 ```
+# Ensure stack local bin directory is on your PATH
+# If you wish to add it run
+# export PATH=$PATH:$(stack path --local-bin)
+
 git clone https://github.com/haskell/haskell-ide-engine --recurse-submodules
 cd haskell-ide-engine
 
-stack ./install.hs hie-version-number
+# Run stack ./install.hs help for more information
+stack ./install.hs stack-build-all
 stack ./install.hs build-data
 ```
