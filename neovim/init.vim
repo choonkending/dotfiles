@@ -19,9 +19,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 " EditorConfig (file format to maintain consistent coding styles between editors) plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
-" Dark powered asynchronous completion framework for neovim/Vim8
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Autocomplete - YouCompleteMe
+" Add intellisense engine which provides true snippet and and additional text
+" editing support
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
@@ -32,9 +32,6 @@ Plug 'mxw/vim-jsx'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'pangloss/vim-javascript'
 
-
-" Calculates the bundle size of from node module
-Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -143,25 +140,17 @@ nnoremap <silent> <C-P> :Files<CR>
 " Map ,S to find all instances of current word with Rg search
 nnoremap <silent> ,S :Rg <C-R><C-W><CR>
 
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-" File source complete the files from the buffer path instead of the current directory.
-let g:deoplete#file#enable_buffer_path = 1
-" Map Tab and Shift + Tab as selection keys in popupmenu-keys
-" - pumvisible - Returns non-zero when the popup menu is visible, zero otherwise
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
 " JSX
 """"""""""""""""""""""""""""""""""""""""
 let g:jsx_ext_required = 0                        " Allow JSX in .js files
 
+" JSON
+""""""""""""""""""""""""""""""""""""""""
+" Add correct comment highlighting for json files
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
 " Asynchronous Lint Engine (ALE)
 """"""""""""""""""""""""""""""""""""""""
-" Use flow as linter
-let g:ale_linters = {
-\  'javascript': ['flow']
-\}
 " Use eslint to fix javascript formatting
 let g:ale_fixers = {
 \   '*': ['prettier'],
@@ -177,3 +166,62 @@ let g:ale_sign_warning = '•'
 " Map ]a and ]b to navigate between ale errors
 nnoremap <silent> ]a :ALENextWrap<CR>
 nnoremap <silent> [a :ALEPreviousWrap<CR>
+
+" Conquer of Completion (COC)
+" Created to have Intellisense like VSCode
+""""""""""""""""""""""""""""""""""""""""
+
+" Do not backup a file while we are overwriting a file
+" Some LSP servers have issues with backup files, see https://github.com/neoclide/coc.nvim/issues/649
+set nobackup
+set nowritebackup
+
+" Set number of screen lines used for command-line
+set cmdheight=2
+
+" Milliseconds of nothing being typed before the swap file is written to disk
+set updatetime=300
+
+" Don't give Insert Completion Menu messages in
+set shortmess+=c
+
+" Always show signcolumn
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate
+"   inoremap - non-recursive mapping in insert mode (it disallows mapping for
+"     <TAB>, to avoid nested and recursive mappings)
+"   silent - execute command silently
+"   pumvisible - returns non-zero when the popup menu is visible, zero otherwise
+"   <expr> - defines that the {lhs} of the mapping will be an expression, and
+"   this expression will be used to obtain the {rhs}
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ coc#refresh()
+
+" Shift-Tab will navigate backwards
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  " col('.') - byte index of the column position given the cursor position
+  let col = col('.') - 1
+  " getline('.') - get line under the cursor
+  " =~# - regex matches
+  " \s  matches space or tab
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <cr> (enter or return) to confirm completion, Cntrl-G u means break undo
+" chain at current position
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use [g and ]g to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
