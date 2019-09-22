@@ -52,6 +52,7 @@ git clone https://github.com/haskell/haskell-ide-engine --recurse-submodules
 cd haskell-ide-engine
 
 # Run stack ./install.hs help for more information
-stack ./install.hs stack-build-all
-stack ./install.hs build-data
+# You can determine what your ghc version by running stack ghc -- --version
+stack ./install.hs stack-build-<your-current-ghc>
+stack ./install.hs stack-build-data
 ```
