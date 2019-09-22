@@ -23,7 +23,9 @@
       ],
       "initializationOptions": {
         "languageServerHaskell": {
-          "hlintOn": true
+          "hlintOn": true,
+          "useCustomHieWrapper": true,
+          "useCustomHieWrapperPath": "hie-wrapper"
         }
       }
     }
