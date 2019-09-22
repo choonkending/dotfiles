@@ -40,7 +40,15 @@ alias vi="nvim"
 git config --global core.editor nvim
 ```
 
-## Configuring Haskell IDE engine for [coc.nvim](https://github.com/neoclide/coc.nvim)
+## [coc.nvim](https://github.com/neoclide/coc.nvim) configuration
+
+### Install flow extension
+1. Open vim and run this
+```
+:CocInstall coc-flow
+```
+
+### Configuring Haskell IDE engine
 
 1. Download the source code following [these instructions](https://github.com/haskell/haskell-ide-engine#download-the-source-code)
 ```
