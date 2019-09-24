@@ -60,7 +60,9 @@ git clone https://github.com/haskell/haskell-ide-engine --recurse-submodules
 cd haskell-ide-engine
 
 # Run stack ./install.hs help for more information
-# You can determine what your ghc version by running stack ghc -- --version
-stack ./install.hs stack-build-<your-current-ghc>
-stack ./install.hs stack-build-data
+stack --stack-yaml=stack-8.6.5.yaml ./install.hs help
+stack --stack-yaml=stack-8.6.5.yaml ./install.hs stack-hie-8.6.5
+
+# Go to your haskell project
+stack build
 ```
