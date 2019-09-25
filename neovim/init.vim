@@ -32,9 +32,6 @@ Plug 'mxw/vim-jsx'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'pangloss/vim-javascript'
 
-
-" Calculates the bundle size of from node module
-Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -158,6 +155,10 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 let g:ale_fixers = {
 \   '*': ['prettier'],
 \   'javascript': ['eslint']
+\}
+
+let g:ale_linters = {
+\   'haskell': []
 \}
 
 let g:ale_fix_on_save = 1     " Fix files automatically on save
