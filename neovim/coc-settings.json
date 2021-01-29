@@ -16,5 +16,6 @@
         "languageServerHaskell": {}
       }
     }
-  }
+  },
+  "metals.sbtScript": "$PWD/sbt"
 }
