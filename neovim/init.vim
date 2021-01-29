@@ -179,6 +179,7 @@ nnoremap <silent> [a :ALEPreviousWrap<CR>
 " Some LSP servers have issues with backup files, see https://github.com/neoclide/coc.nvim/issues/649
 set nobackup
 set nowritebackup
+set noswapfile
 
 set cmdheight=2                 " Set number of screen lines used for command-line
 set updatetime=300              " Milliseconds of nothing being typed before the swap file is written to disk
