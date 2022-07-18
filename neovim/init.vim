@@ -2,10 +2,11 @@
 "                               PLUGINS                                        "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugged')
-" fzf is a general-purpose command-line fuzzy finder
-" PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run install script
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+" Telescope is a fuzzy finder over lists
+" Plenary is a required dependency for telescope & provides lua functions for use
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+
 " A tree explorer plugin for vim
 Plug 'scrooloose/nerdtree'
 " Lean & mean status/tabline for vim
