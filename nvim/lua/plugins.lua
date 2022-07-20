@@ -6,4 +6,7 @@ return require('packer').startup(function()
   -- A file explorer for Neovim written in Lua
   use(require('config.nvim-tree'))
 
+  -- Colour scheme for neovim
+  use(require('config.rose-pine'))
+
 end)
