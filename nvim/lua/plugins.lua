@@ -1,3 +1,6 @@
+-- Reload packages when plugins.lua is updated
+vim.cmd([[autocmd BufWritePost plugins.lua PackerCompile]])
+
 return require('packer').startup(function()
   -- Packer is a plugin manager
   -- Packer can manage itself
