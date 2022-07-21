@@ -9,6 +9,9 @@ return require('packer').startup(function()
   -- A file explorer for Neovim written in Lua
   use(require('config.nvim-tree'))
 
+  -- Fuzzy file finder
+  use(require('config.telescope'))
+
   -- Colour scheme for neovim
   use(require('config.rose-pine'))
 
