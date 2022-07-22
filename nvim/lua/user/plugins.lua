@@ -7,12 +7,12 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- A file explorer for Neovim written in Lua
-  use(require('config.nvim-tree'))
+  use(require('user.config.nvim-tree'))
 
   -- Fuzzy file finder
-  use(require('config.telescope'))
+  use(require('user.config.telescope'))
 
   -- Colour scheme for neovim
-  use(require('config.rose-pine'))
+  use(require('user.config.rose-pine'))
 
 end)
