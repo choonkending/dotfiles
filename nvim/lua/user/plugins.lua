@@ -15,6 +15,9 @@ return require('packer').startup(function()
   -- Neovim tree-sitter is a parser generator tool - helps with syntax highlighting
   use(require('user.config.treesitter'))
 
+  -- Language Server Protocol Configs
+  use(require('user.config.lsp'))
+
   -- Colour scheme for neovim
   use(require('user.config.rose-pine'))
 
