@@ -17,4 +17,5 @@ Hi there! This is just a simple but currated collection of dotfiles.
 1. Install packages while opening neovim
     ```bash
     nvim +PackerSync
-    ```
+1. Configure your terminal to use Nerd Fonts, e.g.
+    - Iterm: Preferences > Profile > Text > Font > Hack Nerd Font
