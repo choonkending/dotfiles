@@ -18,6 +18,9 @@ return require('packer').startup(function()
   -- Language Server Protocol Configs
   use(require('user.config.lsp'))
 
+  -- Completion engine
+  use(require('user.config.completion'))
+
   -- Colour scheme for neovim
   use(require('user.config.rose-pine'))
 
