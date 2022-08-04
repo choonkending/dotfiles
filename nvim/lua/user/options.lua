@@ -2,6 +2,7 @@
 -- Standard Neovim Settings     --
 -- -------------------------------
 local set = vim.opt
+local global_set = vim.opt_global
 
 -- Use clipboard as default register
 set.clipboard= 'unnamed'
@@ -30,3 +31,10 @@ set.splitright = true            -- Split a window to the right of the current o
 set.undofile = true              -- Save undo's after file closes
 set.undolevels = 1000            -- How many undos
 set.undoreload = 10000           -- number of lines to save for undo
+
+-- shortmess is an option used to configure the display messages on vim
+-- It can be used to reduce how often we see the "Hit ENTER to continue" prompt
+-- F - don't give file info when editing a file, like `:silent` was used for the command
+-- Without doing this, autocommands that deal with filetypes prohibit messages from being shown,
+-- so some of the messages shown by nvim-metals to help users get started may not be shown.
+global_set.shortmess:remove("F")
