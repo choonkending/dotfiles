@@ -7,6 +7,8 @@ brew "ripgrep"
 brew "fd"
 # curl - command line tool and library for transferring data with URLs
 brew "curl"
+# coursier - pure Scala artifact fetching
+brew "coursier"
 
 # Install nerd fonts for nice icons
 tap "homebrew/cask-fonts"
