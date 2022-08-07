@@ -18,6 +18,10 @@ return require('packer').startup(function()
   -- Language Server Protocol Configs
   use(require('user.config.lsp'))
 
+  -- Set up Scala metals
+  -- Currently this doesn't work when configured through nvim-lspconfig
+  use(require('user.config.nvim-metals'))
+
   -- Completion engine
   use(require('user.config.completion'))
 
