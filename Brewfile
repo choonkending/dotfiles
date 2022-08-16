@@ -5,6 +5,10 @@ brew "neovim"
 brew "ripgrep"
 # fd - program to find entries in your filesystem. It is a simple, fast and user-friendly alternative to `find`
 brew "fd"
+# curl - command line tool and library for transferring data with URLs
+brew "curl"
+# coursier - pure Scala artifact fetching
+brew "coursier"
 
 # Install nerd fonts for nice icons
 tap "homebrew/cask-fonts"

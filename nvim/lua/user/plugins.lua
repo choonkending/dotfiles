@@ -12,6 +12,19 @@ return require('packer').startup(function()
   -- Fuzzy file finder
   use(require('user.config.telescope'))
 
+  -- Neovim tree-sitter is a parser generator tool - helps with syntax highlighting
+  use(require('user.config.treesitter'))
+
+  -- Language Server Protocol Configs
+  use(require('user.config.lsp'))
+
+  -- Set up Scala metals
+  -- Currently this doesn't work when configured through nvim-lspconfig
+  use(require('user.config.nvim-metals'))
+
+  -- Completion engine
+  use(require('user.config.completion'))
+
   -- Colour scheme for neovim
   use(require('user.config.rose-pine'))
 
