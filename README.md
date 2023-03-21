@@ -10,6 +10,8 @@ Hi there! This is just a simple but currated collection of dotfiles.
     ```bash
     git clone git@github.com:choonkending/dotfiles.git
     ```
+    
+1. Install [HomeBrew](https://brew.sh/) to your machine.
 1. Run the install script to set up and copy the necessary dotfiles to your local filesystem
     ```bash
     ./install.sh
