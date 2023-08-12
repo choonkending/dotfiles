@@ -1,7 +1,7 @@
 return {
-  'kyazdani42/nvim-tree.lua',
+  'nvim-tree/nvim-tree.lua',
 
-  requires = { 'kyazdani42/nvim-web-devicons' },
+  requires = { 'nvim-tree/nvim-web-devicons' },
 
   tag = 'nightly',
 
