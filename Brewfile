@@ -1,15 +1,44 @@
-# packages
-# neovim - a hyperextensible Vim-based text editor
-brew "neovim"
-# ripgrep - line-oriented search tool that recursively searches the current directory for a regex pattern
-brew "ripgrep"
-# fd - program to find entries in your filesystem. It is a simple, fast and user-friendly alternative to `find`
-brew "fd"
-# curl - command line tool and library for transferring data with URLs
-brew "curl"
-# coursier - pure Scala artifact fetching
-brew "coursier"
+# Default Configurations:
+#    Set arguments for all 'brew install --cask' commands
+#    require-sha: abort installation of cask if no checksum is defined
+cask_args require_sha: true
 
-# Install nerd fonts for nice icons
-tap "homebrew/cask-fonts"
-cask "font-hack-nerd-font"
+# Main Applications:
+
+#    Browser: Arc
+#    brew install --cask arc
+cask "arc"
+
+#    Terminal: Warp
+#    brew install --cask warp
+cask "warp"
+
+#    Productivity Tools: Rectangle
+#         Allows for moving and resizing windows using keyboard shortcuts or snap areas
+#    brew install --cask rectangle
+cask "rectangle"
+
+#    IDE: IntelliJ Community Edition
+#         This also installs Kotlin as a language
+#    brew install --cask intellij-idea-ce
+cask "intellij-idea-ce"
+
+# Command Line Applications:
+
+#    IDE: Neovim
+#    brew install neovim
+brew "neovim"
+
+#    Neovim Configurations
+#       Required for LazyVim
+#
+#     	ripgrep: a line-oriented search tool that recursively searches the current directory for a regex pattern
+#    	brew install ripgrep
+brew "ripgrep"
+
+#	fd is a program to find entries in your filesystem. It is a simple, fast and user-friendly alternative to find
+brew "fd"
+
+#     Package Manager for Lluarocks
+#       luarocks
+brew "luarocks"
