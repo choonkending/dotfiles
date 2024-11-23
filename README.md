@@ -70,6 +70,8 @@ alias glgg="git log --graph"
 alias gd="git diff"
 alias gdca="git diff --cached"
 alias gc="git commit"
+alias gco="git checkout"
+alias gb="git branch"
 ```
 - Execute the changes
 
