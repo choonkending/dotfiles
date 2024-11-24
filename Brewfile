@@ -13,6 +13,10 @@ cask "arc"
 #    brew install --cask warp
 cask "warp"
 
+#    Containerisation: Docker
+#    brew install --cask docker
+cask "docker"
+
 #    Productivity Tools: Rectangle
 #         Allows for moving and resizing windows using keyboard shortcuts or snap areas
 #    brew install --cask rectangle
@@ -22,6 +26,10 @@ cask "rectangle"
 #         This also installs Kotlin as a language
 #    brew install --cask intellij-idea-ce
 cask "intellij-idea-ce"
+
+#   Java Development Kit: Adoptium Temurin@21 - LTS
+#   brew install --cask temurin@21
+cask "temurin@21"
 
 # Command Line Applications:
 
@@ -42,3 +50,8 @@ brew "fd"
 #     Package Manager for Lluarocks
 #       luarocks
 brew "luarocks"
+
+#     Build Tools: Gradle
+#     brew install gradle
+#     Prerequisite: Java is installed
+brew "gradle"

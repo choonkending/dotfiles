@@ -36,6 +36,9 @@ git clone git@github.com:choonkending/dotfiles.git
 
 4. Install applications using brew bundle
 
+> [!NOTE]
+> Please change the JDK version in the Brewfile if required
+
 - **Purpose**: Install the default (opinionated) applications and tools that have been defined in the Brewfile.
 - Navigate to the directory where you cloned the dotfiles and run the following instructions
 
