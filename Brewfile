@@ -25,6 +25,8 @@ cask "rectangle"
 #    IDE: IntelliJ Community Edition
 #         This also installs Kotlin as a language
 #    brew install --cask intellij-idea-ce
+#    IDE: IntelliJ (If you do not need the community edition)
+#        cask "intellij-idea"
 cask "intellij-idea-ce"
 
 #   Java Development Kit: Adoptium Temurin@21 - LTS
