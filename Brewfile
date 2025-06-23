@@ -13,10 +13,6 @@ cask "arc"
 #    brew install --cask warp
 cask "warp"
 
-#    Containerisation: Docker
-#    brew install --cask docker
-cask "docker"
-
 #    Productivity Tools: Rectangle
 #         Allows for moving and resizing windows using keyboard shortcuts or snap areas
 #    brew install --cask rectangle
@@ -57,3 +53,7 @@ brew "luarocks"
 #     brew install gradle
 #     Prerequisite: Java is installed
 brew "gradle"
+
+#     Environment Switcher: jEnv
+#     brew install jenv
+brew "jenv"

@@ -50,13 +50,15 @@ cd /path/to/dotfiles/
 brew bundle
 ```
 
-5. Set default git configurations (set username, email etc)
+5. Install [docker desktop](https://docs.docker.com/desktop/setup/install/mac-install/) on Mac
+
+6. Set default git configurations (set username, email etc)
 
 ```
 ./configure_git.sh
 ```
 
-6. Set aliases for git in your shell
+7. Set aliases for git in your shell
 
 - Open your shell configuration file .zshrc
 
@@ -82,7 +84,7 @@ alias gb="git branch"
 source ~/.zshrc
 ```
 
-7. [Optional] - Set the installed applications as your default
+8. [Optional] - Set the installed applications as your default
 
 - **Purpose**: Make it easier for your workflow
 
